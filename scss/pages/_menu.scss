@@ -1,0 +1,104 @@
+.menu-main ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    padding: 1rem;
+
+    background-color: var(--anti-flash-white);
+    color: var(--dark-green);
+    transition: box-shadow 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(47, 83, 110, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(47, 83, 110, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(47, 83, 110, 0.2);
+}
+
+.menu-item:hover {
+    -webkit-box-shadow: 0px 5px 14px 8px rgba(47, 83, 110, 0.2);
+    -moz-box-shadow: 0px 5px 14px 8px rgba(47, 83, 110, 0.2);
+    box-shadow: 0px 5px 14px 8px rgba(47, 83, 110, 0.2);
+
+    transform: scale(1.01);
+}
+
+.menu-item-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--stone);
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+.menu-item-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.menu-item-title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.25rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--stone);
+    color: var(--anti-flash-white);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.menu-item-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.price {
+    background: var(--caribbean-green);
+    background: linear-gradient(310deg, var(--mountain-meadow) 0%, var(--caribbean-green) 100%);
+    border-radius: 0.5rem;
+    color: var(--dark-green);
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+}
+
+.discount {
+    background: none;
+    text-decoration: line-through;
+    color: var(--stone);
+    font-weight: normal;
+}
+
+.hit-badge::before {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    content: "HIT!";
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0 0.5rem;
+    background: var(--caribbean-green);
+    background: linear-gradient(310deg, var(--mountain-meadow) 0%, var(--caribbean-green) 100%);
+    color: var(--dark-green);
+}
