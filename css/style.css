@@ -344,7 +344,7 @@ footer {
         position: static;
         flex-direction: column;
         align-items: stretch;
-        padding-inline: 1rem;
+        padding-inline: 0;
     }
 
     .logo {
